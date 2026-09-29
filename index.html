@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Srushti Chougule | Marketing Portfolio</title>
+<meta name="description" content="Srushti Chougule, Pune. Branding, social media, graphic design and event marketing portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Hind:wght@400;500;600&family=Yatra+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --indigo:#1d1148; --plum:#3a1466; --pink:#e5087e; --marigold:#ffb703;
+  --teal:#00a896; --vermilion:#ff4b2b; --paper:#fff9ef; --ink:#170d3a;
+  --display:"Rozha One","Times New Roman",serif; --deco:"Yatra One",Georgia,serif;
+  --body:"Hind",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--marigold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02}
+h2{font-size:clamp(2.6rem,7vw,5.5rem)}
+
+/* toran: hanging festive bunting */
+.toran{height:46px;background:
+  conic-gradient(from 135deg at 50% 0,var(--marigold) 90deg,transparent 0) 0 0/46px 46px,
+  linear-gradient(var(--pink),var(--pink)) 0 0/100% 6px no-repeat;
+  filter:drop-shadow(0 2px 0 rgba(0,0,0,.12))}
+.toran.alt{background:
+  conic-gradient(from 135deg at 50% 0,var(--teal) 90deg,transparent 0) 0 0/46px 46px,
+  linear-gradient(var(--vermilion),var(--vermilion)) 0 0/100% 6px no-repeat}
+
+nav{position:sticky;top:0;z-index:10;background:var(--indigo);color:var(--paper)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:.7rem}
+nav b{font-family:var(--deco);font-size:1.4rem;font-weight:400;color:var(--marigold)}
+nav ul{display:flex;gap:1.4rem;list-style:none;padding:0;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover{color:var(--marigold)}
+
+/* hero */
+.hero{background:var(--indigo);color:var(--paper);position:relative;overflow:hidden;padding:clamp(3rem,8vw,6rem) 0 clamp(4rem,9vw,7rem)}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:2rem}
+.namaste{font-family:var(--deco);color:var(--marigold);font-size:clamp(1.6rem,4vw,2.4rem)}
+.hero h1{font-size:clamp(3.6rem,13vw,10.5rem);letter-spacing:-.01em}
+.hero h1 span{display:block}
+.hero h1 .p{color:var(--pink)}
+.hero h1 .m{color:var(--marigold);padding-left:clamp(1rem,8vw,7rem)}
+.hero p{max-width:34rem;font-size:1.3rem}
+.cta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.85rem 1.7rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--marigold);transition:transform .15s}
+.btn.fill{background:var(--marigold);color:var(--indigo)}
+.btn:hover{transform:translateY(-3px) rotate(-1deg)}
+.mandala{position:absolute;right:-14vw;top:50%;width:min(85vw,760px);translate:0 -50%;opacity:.9;animation:spin 90s linear infinite}
+@keyframes spin{to{rotate:360deg}}
+
+/* ticker */
+.ticker{background:var(--pink);color:#fff;overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:var(--display);font-size:clamp(1.6rem,4vw,2.6rem)}
+.ticker div{display:inline-block;animation:tick 28s linear infinite}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{padding:clamp(3.5rem,9vw,7rem) 0}
+
+/* about */
+.about .grid{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:50% 50% 1.2rem 1.2rem/38% 38% 1.2rem 1.2rem;background:linear-gradient(160deg,var(--pink),var(--marigold));position:relative;overflow:hidden;border:6px solid var(--indigo);box-shadow:14px 14px 0 var(--teal)}
+.portrait img,.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-family:var(--deco);color:rgba(255,255,255,.92);font-size:1.3rem;padding:1rem}
+.about h2{margin-bottom:1.2rem}
+.about p+p{margin-top:1rem}
+.facts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.facts span{background:var(--indigo);color:var(--paper);border-radius:999px;padding:.35rem 1rem;font-size:1rem}
+
+/* skills */
+.skills{background:var(--plum);color:var(--paper)}
+.skills h2{color:var(--marigold);margin-bottom:2.5rem}
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.4rem}
+.sk article{border:2px solid rgba(255,255,255,.25);border-radius:1.4rem 1.4rem 1.4rem 0;padding:1.6rem;background:rgba(255,255,255,.05)}
+.sk article:nth-child(1){border-color:var(--pink)}
+.sk article:nth-child(2){border-color:var(--marigold)}
+.sk article:nth-child(3){border-color:var(--teal)}
+.sk article:nth-child(4){border-color:var(--vermilion)}
+.sk h3{font-size:2rem;margin-bottom:.6rem}
+.sk ul{padding-left:1.1rem}
+.sk li{margin:.2rem 0}
+.sk li::marker{color:var(--marigold)}
+
+/* flyers */
+.work h2{margin-bottom:.6rem}
+.work>.wrap>p{max-width:36rem;margin-bottom:3rem}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:2.4rem 1.8rem}
+.flyer{transition:transform .25s}
+.flyer:nth-child(odd){rotate:-1.6deg}
+.flyer:nth-child(even){rotate:1.4deg;margin-top:1.6rem}
+.flyer:hover{transform:scale(1.04) rotate(0deg);z-index:2}
+.art{aspect-ratio:4/5;position:relative;overflow:hidden;border-radius:.4rem;border:5px solid #fff;box-shadow:0 12px 26px rgba(23,13,58,.28)}
+.f1 .art{background:linear-gradient(150deg,var(--pink),var(--vermilion))}
+.f2 .art{background:linear-gradient(150deg,var(--teal),var(--indigo))}
+.f3 .art{background:linear-gradient(150deg,var(--marigold),var(--pink))}
+.f4 .art{background:linear-gradient(150deg,var(--plum),var(--pink))}
+.f5 .art{background:linear-gradient(150deg,var(--vermilion),var(--marigold))}
+.f6 .art{background:linear-gradient(150deg,var(--indigo),var(--teal))}
+.art svg{position:absolute;right:-25%;bottom:-18%;width:90%;opacity:.35}
+.flyer figcaption{margin-top:.9rem}
+.flyer strong{font-family:var(--deco);font-weight:400;font-size:1.35rem;display:block}
+.flyer small{font-size:.98rem;opacity:.8}
+
+/* process/results strip */
+.nums{background:var(--marigold);color:var(--indigo)}
+.nums .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;text-align:center}
+.nums b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(3.4rem,8vw,5.6rem);line-height:1}
+.nums span{font-weight:600}
+
+/* contact */
+.contact{background:var(--indigo);color:var(--paper);text-align:center;position:relative;overflow:hidden}
+.contact h2{color:var(--marigold);max-width:14ch;margin:0 auto 1.4rem}
+.contact p{max-width:32rem;margin:0 auto 2rem}
+.contact .cta{justify-content:center}
+footer{background:var(--ink);color:rgba(255,249,239,.7);text-align:center;padding:1.4rem;font-size:.95rem}
+
+@media(max-width:760px){
+  .about .grid{grid-template-columns:1fr}
+  .portrait{max-width:320px}
+  .mandala{opacity:.35;right:-40vw}
+  nav ul{gap:.9rem;font-size:1rem}
+  .flyer:nth-child(even){margin-top:0}
+}
+@media(prefers-reduced-motion:reduce){.mandala,.ticker div{animation:none}html{scroll-behavior:auto}}
+
+html,body{overflow-x:hidden}
+nav .wrap{justify-content:center}
+nav ul{justify-content:center;gap:.4rem 1.6rem}
+.hero .namaste{font-size:clamp(1.5rem,4vw,2.2rem)}
+.hero h1{font-size:clamp(3.8rem,17vw,12rem);line-height:.95}
+.hero h1 span{display:block}
+.hero h1 .m{padding-left:clamp(.8rem,7vw,6rem)}
+.hero .tag{font-family:var(--deco);font-size:clamp(1.35rem,3.6vw,2.1rem);color:var(--pink);line-height:1.2}
+.exp{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1.4rem;margin-top:2.4rem}
+.exp article{background:#fff;border-left:8px solid var(--pink);border-radius:.4rem 1.4rem 1.4rem .4rem;padding:1.4rem 1.5rem;box-shadow:0 8px 20px rgba(23,13,58,.12)}
+.exp article:nth-child(4n+2){border-color:var(--marigold)}
+.exp article:nth-child(4n+3){border-color:var(--teal)}
+.exp article:nth-child(4n+4){border-color:var(--vermilion)}
+.exp h3{font-size:1.6rem;margin-bottom:.1rem}
+.exp .co{font-family:var(--deco);color:var(--plum);margin-bottom:.5rem}
+.exp ul{padding-left:1.1rem;font-size:1.05rem}
+.exp li{margin:.2rem 0}
+.more{background:var(--teal);color:var(--indigo)}
+.more h2{margin-bottom:2rem}
+.more .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1.6rem}
+.more article{background:var(--paper);border-radius:1.4rem;padding:1.6rem;border:3px solid var(--indigo)}
+.more h3{font-size:1.9rem;margin-bottom:.6rem}
+.more p+p{margin-top:.6rem}
+.cert{margin-top:1.4rem;display:inline-block;background:var(--marigold);color:var(--indigo);border-radius:999px;padding:.4rem 1.1rem;font-weight:600}
+@media(max-width:760px){
+  body{font-size:1.05rem}
+  .hero{padding-top:2.5rem}
+  .hero p{font-size:1.15rem}
+  .btn{padding:.75rem 1.3rem}
+  .wall{grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:1.8rem 1.2rem}
+  .flyer:nth-child(odd),.flyer:nth-child(even){rotate:0deg;margin-top:0}
+  .about h2,.work h2,.skills h2,.exp h2,.contact h2,.more h2{font-size:clamp(2.3rem,11vw,3rem)}
+  .toran{height:34px;background-size:34px 34px,100% 6px}
+  .contact .btn{width:100%;text-align:center}
+}
+.exp .pl{display:inline-block;margin-top:.8rem;font-weight:600;color:var(--pink);text-underline-offset:4px}
+.cert{text-decoration:none}
+.cert:hover{background:var(--pink);color:#fff}
+.contact .cta{gap:.8rem}
+</style>
+</head>
+<body>
+
+<!-- Reusable rangoli motif -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mandala" viewBox="-200 -200 400 400">
+      <g fill="none" stroke-width="3">
+        <circle r="190" stroke="#ffb703" stroke-dasharray="2 10" stroke-linecap="round" stroke-width="5"/>
+        <g id="ring1" stroke="#e5087e">
+          <path d="M0-180C30-140 30-110 0-80C-30-110-30-140 0-180Z"/>
+          <path d="M0-180C30-140 30-110 0-80C-30-110-30-140 0-180Z" transform="rotate(30)"/>
+          <path d="M0-180C30-140 30-110 0-80C-30-110-30-140 0-180Z" transform="rotate(60)"/>
+          <path d="M0-180C30-140 30-110 0-80C-30-110-30-140 0-180Z" transform="rotate(90)"/>
+          <path d="M0-180C30-140 30-110 0-80C-30-110-30-140 0-180Z" transform="rotate(120)"/>
+          <path d="M0-180C30-140 30-110 0-80C-30-110-30-140 0-180Z" transform="rotate(150)"/>
+        </g>
+        <use href="#ring1" transform="rotate(180)"/>
+        <g stroke="#00a896">
+          <path d="M0-120C-18-95-18-75 0-55C18-75 18-95 0-120Z" transform="rotate(15)"/>
+          <path d="M0-120C-18-95-18-75 0-55C18-75 18-95 0-120Z" transform="rotate(45)"/>
+          <path d="M0-120C-18-95-18-75 0-55C18-75 18-95 0-120Z" transform="rotate(75)"/>
+          <path d="M0-120C-18-95-18-75 0-55C18-75 18-95 0-120Z" transform="rotate(105)"/>
+          <path d="M0-120C-18-95-18-75 0-55C18-75 18-95 0-120Z" transform="rotate(135)"/>
+          <path d="M0-120C-18-95-18-75 0-55C18-75 18-95 0-120Z" transform="rotate(165)"/>
+          <path d="M0-120C-18-95-18-75 0-55C18-75 18-95 0-120Z" transform="rotate(195)"/>
+          <path d="M0-120C-18-95-18-75 0-55C18-75 18-95 0-120Z" transform="rotate(225)"/>
+          <path d="M0-120C-18-95-18-75 0-55C18-75 18-95 0-120Z" transform="rotate(255)"/>
+          <path d="M0-120C-18-95-18-75 0-55C18-75 18-95 0-120Z" transform="rotate(285)"/>
+          <path d="M0-120C-18-95-18-75 0-55C18-75 18-95 0-120Z" transform="rotate(315)"/>
+          <path d="M0-120C-18-95-18-75 0-55C18-75 18-95 0-120Z" transform="rotate(345)"/>
+        </g>
+        <circle r="40" stroke="#ffb703" stroke-width="6"/>
+        <circle r="14" fill="#e5087e" stroke="none"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Flyers</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="toran" aria-hidden="true"></div>
+
+<header class="hero">
+  <svg class="mandala" aria-hidden="true"><use href="#mandala"/></svg>
+  <div class="wrap">
+    <div class="namaste">नमस्ते, I'm</div>
+    <h1><span>Srushti</span><span class="m">Chougule</span></h1>
+    <div class="tag">I make people stop scrolling.</div>
+    <p>BBA (Computer Applications) student in Pune with hands-on work in branding, social media, graphic design and event marketing. Trained Bharatanatyam dancer, so I know how to hold an audience.</p>
+    <div class="cta">
+      <a class="btn fill" href="#work">See my flyers</a>
+      <a class="btn" href="#contact">Hire me as an intern</a>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div>Branding ✺ Social media ✺ Graphic design ✺ Event coordination ✺ Content creation ✺ Bharatanatyam ✺ Branding ✺ Social media ✺ Graphic design ✺ Event coordination ✺ Content creation ✺ Bharatanatyam ✺ </div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap grid">
+    <div class="portrait">
+      <div class="ph">Your photo here</div>
+      <img src="images/portrait.jpg" alt="Portrait of Srushti Chougule" onerror="this.remove()">
+    </div>
+    <div>
+      <h2>Creative by training, strategic by choice.</h2>
+      <p>I'm a creative BBA (Computer Applications) student at BMCC, Pune, passionate about building brands and delivering marketing campaigns that get noticed.</p>
+      <p>I've managed brand and social media for real estate and construction companies, covered cultural events with camera in hand, and designed for healthcare and career brands.</p>
+      <div class="facts">
+        <span>BBA (CA), BMCC Pune, 2024 to 2027</span>
+        <span>Pune, Maharashtra</span>
+        <span>Canva certified</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <h2>Flyers I've made</h2>
+    <p>Promotional creatives from my client and freelance work. Each card names the brand it was made for.</p>
+    <div class="wall">
+      <!-- Save your flyers as images/flyer-1.jpg ... flyer-6.jpg. The gradient shows until the image exists. -->
+      <figure class="flyer f1"><div class="art"><svg aria-hidden="true"><use href="#mandala"/></svg><div class="ph">Flyer 1<br>Aviz Healthcare</div><img src="images/flyer-1.jpg" alt="Aviz Healthcare promotional creative" onerror="this.remove()"></div><figcaption><strong>Aviz Healthcare</strong><small>Freelance promotional creative</small></figcaption></figure>
+      <figure class="flyer f2"><div class="art"><svg aria-hidden="true"><use href="#mandala"/></svg><div class="ph">Flyer 2<br>Careermyntra</div><img src="images/flyer-2.jpg" alt="Careermyntra social media graphic" onerror="this.remove()"></div><figcaption><strong>Careermyntra</strong><small>Social media graphic</small></figcaption></figure>
+      <figure class="flyer f3"><div class="art"><svg aria-hidden="true"><use href="#mandala"/></svg><div class="ph">Flyer 3<br>Navnivesh Properties</div><img src="images/flyer-3.jpg" alt="Navnivesh Properties creative" onerror="this.remove()"></div><figcaption><strong>Navnivesh Properties</strong><small>Real estate promotion</small></figcaption></figure>
+      <figure class="flyer f4"><div class="art"><svg aria-hidden="true"><use href="#mandala"/></svg><div class="ph">Flyer 4<br>Case Construction</div><img src="images/flyer-4.jpg" alt="Case Construction creative" onerror="this.remove()"></div><figcaption><strong>Case Construction</strong><small>Brand and campaign creative</small></figcaption></figure>
+      <figure class="flyer f5"><div class="art"><svg aria-hidden="true"><use href="#mandala"/></svg><div class="ph">Flyer 5<br>Ojas</div><img src="images/flyer-5.jpg" alt="Ojas cultural event poster" onerror="this.remove()"></div><figcaption><strong>Ojas</strong><small>Cultural event poster</small></figcaption></figure>
+      <figure class="flyer f6"><div class="art"><svg aria-hidden="true"><use href="#mandala"/></svg><div class="ph">Flyer 6<br>Vibrant Viral Media</div><img src="images/flyer-6.jpg" alt="Vibrant Viral Media design" onerror="this.remove()"></div><figcaption><strong>Vibrant Viral Media</strong><small>Design internship work</small></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="nums" aria-label="Highlights">
+  <div class="wrap">
+    <div><b>7</b><span>roles across brands and freelance</span></div>
+    <div><b>2</b><span>brands managed end to end</span></div>
+    <div><b>9+</b><span>years of Bharatanatyam on stage</span></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Where I've worked</h2>
+    <div class="exp">
+      <article><h3>Brand &amp; Social Media Manager</h3><div class="co">Case Construction, Pune</div><ul><li>Managed the company's brand identity and social media presence.</li><li>Created marketing content, promotional creatives and audience engagement campaigns.</li></ul><a class="pl" href="case-construction.html">Read the full project</a></article>
+      <article><h3>Brand &amp; Social Media Manager</h3><div class="co">Navnivesh Properties, Pune</div><ul><li>Managed brand communication and social media presence.</li><li>Created marketing content, promotional creatives and audience engagement campaigns.</li></ul><a class="pl" href="navnivesh.html">Read the full project</a></article>
+      <article><h3>Social Media Manager</h3><div class="co">Ojas, Pune</div><ul><li>Managed Instagram content for cultural events and stage performances.</li><li>Captured event photography and videography to showcase performances and activities.</li></ul></article>
+      <article><h3>Operations Intern, Offline Management</h3><div class="co">Art Therapy, Pune</div><ul><li>Supported customer engagement, event coordination, influencer collaborations and social media.</li><li>Handled operational coordination and the founder's work calendar.</li></ul><a class="pl" href="art-therapy.html">Read the full project</a></article>
+      <article><h3>Freelance Graphic Designer</h3><div class="co">Aviz Healthcare</div><ul><li>Designed promotional creatives and branding materials.</li></ul></article>
+      <article><h3>Freelance Graphic Designer</h3><div class="co">Careermyntra</div><ul><li>Created social media graphics and branding assets.</li></ul></article>
+      <article><h3>Graphic Designer Intern</h3><div class="co">Vibrant Viral Media</div><ul><li>Design internship supporting the agency's creative work.</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <div class="wrap">
+    <h2>What I bring</h2>
+    <div class="sk">
+      <article><h3>Marketing</h3><ul><li>Branding</li><li>Social media marketing</li><li>Content creation and writing</li><li>Customer support</li></ul></article>
+      <article><h3>Design and media</h3><ul><li>Graphic design, Canva</li><li>UI/UX basics</li><li>Photography</li><li>Videography</li></ul></article>
+      <article><h3>Tech</h3><ul><li>MS Excel and MS Word</li><li>SQL</li><li>Java</li><li>C programming</li></ul></article>
+      <article><h3>People</h3><ul><li>Clear communication</li><li>Event coordination</li><li>Influencer collaboration</li><li>Calendar and operations</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="more">
+  <div class="wrap">
+    <h2>Beyond the brief</h2>
+    <div class="cols">
+      <article><h3>Research</h3><p><b>AI Marketing in Real Estate.</b> Studied AI-driven lead nurturing, customer engagement, sales optimization and digital marketing strategies.</p></article>
+      <article><h3>Education</h3><p>Bachelor of Business Administration (Computer Applications), BMCC, Pune, 2024 to 2027.</p><p>Higher Secondary: The Bishop's School, Pune. Secondary: St. Helena's School, Pune.</p><a class="cert" href="https://YOUR-CANVA-CERTIFICATE-LINK" target="_blank" rel="noopener">Canva Design Certification</a></article>
+      <article><h3>Bharatanatyam</h3><p>Trained dancer with 9+ years of performance experience and a Madhyama Purna certification. Stage discipline, storytelling and showing up on time carry straight into my campaigns.</p></article>
+    </div>
+  </div>
+</section>
+
+<div class="toran alt" aria-hidden="true" style="transform:scaleY(-1)"></div>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's make something people remember.</h2>
+    <p>I'm looking for a marketing internship in Pune or remote. Send a brief, a question or an offer and I'll reply within a day.</p>
+    <div class="cta">
+      <a class="btn fill" href="mailto:srushtichougule13@gmail.com">srushtichougule13@gmail.com</a>
+      <a class="btn" href="tel:+919011043424">+91 90110 43424</a>
+      <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://www.instagram.com/YOUR-INSTAGRAM" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Srushti Chougule. Pune, Maharashtra.</footer>
+</body>
+</html>
