@@ -185,6 +185,12 @@ nav ul{justify-content:center;gap:.4rem 1.6rem}
 .of li:nth-child(4n+2){background:var(--indigo);color:var(--marigold)}
 .of li:nth-child(4n+3){background:var(--teal)}
 @media(max-width:760px){.offer h2{font-size:clamp(2.3rem,11vw,3rem)}.tl{grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr))}.about .cert{display:block;text-align:center}}
+/* flyers: show the whole image at its own proportions */
+.wall{align-items:start}
+.art img{object-fit:contain}
+.art:has(img){aspect-ratio:auto;background:#fff}
+.art:has(img) img{position:static;width:100%;height:auto;display:block}
+.art:has(img) .ph,.art:has(img) svg{display:none}
 </style>
 </head>
 <body>
