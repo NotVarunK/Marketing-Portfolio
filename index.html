@@ -168,6 +168,23 @@ nav ul{justify-content:center;gap:.4rem 1.6rem}
 .cert{text-decoration:none}
 .cert:hover{background:var(--pink);color:#fff}
 .contact .cta{gap:.8rem}
+
+.tools{margin-top:2rem}
+.tools h3{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:1rem}
+.tl{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:.8rem;list-style:none;padding:0}
+.tl li{display:flex;align-items:center;gap:.6rem;background:#fff;border:2px solid var(--indigo);border-radius:999px;padding:.35rem 1rem .35rem .4rem;font-weight:600;font-size:1rem}
+.lg{position:relative;flex:none;width:2.2rem;height:2.2rem;border-radius:50%;display:grid;place-items:center;color:#fff;font-family:var(--deco);font-size:1.05rem;overflow:hidden}
+.lg img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;padding:3px}
+.about .cert{margin-top:1.6rem}
+.offer{background:var(--marigold);color:var(--indigo)}
+.offer h2{margin-bottom:.6rem}
+.offer>.wrap>p{max-width:34rem;margin-bottom:2.4rem}
+.of{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:1rem;list-style:none;padding:0}
+.of li{font-family:var(--display);font-size:clamp(1.4rem,3vw,1.8rem);line-height:1.1;padding:1.3rem 1.2rem;border:3px solid var(--indigo);border-radius:1.4rem 1.4rem 1.4rem 0;background:var(--paper);min-height:6.5rem;display:flex;align-items:flex-end}
+.of li:nth-child(4n+1){background:var(--pink);color:#fff}
+.of li:nth-child(4n+2){background:var(--indigo);color:var(--marigold)}
+.of li:nth-child(4n+3){background:var(--teal)}
+@media(max-width:760px){.offer h2{font-size:clamp(2.3rem,11vw,3rem)}.tl{grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr))}.about .cert{display:block;text-align:center}}
 </style>
 </head>
 <body>
@@ -214,6 +231,7 @@ nav ul{justify-content:center;gap:.4rem 1.6rem}
       <li><a href="#about">About</a></li>
       <li><a href="#work">Flyers</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#offer">Services</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -254,6 +272,13 @@ nav ul{justify-content:center;gap:.4rem 1.6rem}
         <span>Pune, Maharashtra</span>
         <span>Canva certified</span>
       </div>
+      <div class="tools">
+        <h3>Tools I use</h3>
+        <!-- Drop each logo in images/logos/ as canva.png, lovable.png, chatgpt.png, nano-banana.png, figma.png, excel.png, vsco.png, slack.png, notion.png -->
+        <ul class="tl"><li><span class="lg" style="background:#00c4cc">C<img src="images/logos/canva.png" alt="" onerror="this.remove()"></span>Canva</li><li><span class="lg" style="background:#e5087e">L<img src="images/logos/lovable.png" alt="" onerror="this.remove()"></span>Lovable</li><li><span class="lg" style="background:#10a37f">G<img src="images/logos/chatgpt.png" alt="" onerror="this.remove()"></span>ChatGPT</li><li><span class="lg" style="background:#ffb703">N<img src="images/logos/nano-banana.png" alt="" onerror="this.remove()"></span>Nano Banana</li><li><span class="lg" style="background:#a259ff">F<img src="images/logos/figma.png" alt="" onerror="this.remove()"></span>Figma</li><li><span class="lg" style="background:#1d6f42">X<img src="images/logos/excel.png" alt="" onerror="this.remove()"></span>Excel</li><li><span class="lg" style="background:#170d3a">V<img src="images/logos/vsco.png" alt="" onerror="this.remove()"></span>VSCO</li><li><span class="lg" style="background:#4a154b">S<img src="images/logos/slack.png" alt="" onerror="this.remove()"></span>Slack</li><li><span class="lg" style="background:#170d3a">N<img src="images/logos/notion.png" alt="" onerror="this.remove()"></span>Notion</li></ul>
+      </div>
+      <a class="cert" href="https://YOUR-CANVA-CERTIFICATE-LINK" target="_blank" rel="noopener">Canva Design Certification</a>
+
     </div>
   </div>
 </section>
@@ -294,6 +319,14 @@ nav ul{justify-content:center;gap:.4rem 1.6rem}
       <article><h3>Freelance Graphic Designer</h3><div class="co">Careermyntra</div><ul><li>Created social media graphics and branding assets.</li></ul></article>
       <article><h3>Graphic Designer Intern</h3><div class="co">Vibrant Viral Media</div><ul><li>Design internship supporting the agency's creative work.</li></ul></article>
     </div>
+  </div>
+</section>
+
+<section class="offer" id="offer">
+  <div class="wrap">
+    <h2>What I offer</h2>
+    <p>The work I can take off your plate from day one.</p>
+    <ul class="of"><li>Brand identity</li><li>Graphic design</li><li>Creative direction</li><li>Social media management</li><li>Influencer management</li><li>Audience profiling</li><li>Content writing</li><li>PR relations</li><li>Event planning and promotion</li><li>Product marketing</li></ul>
   </div>
 </section>
 
